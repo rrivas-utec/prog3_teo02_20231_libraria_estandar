@@ -131,7 +131,7 @@ void ejemplo_iteradores() {
 
 template <typename Iterator>
 auto average(Iterator start, Iterator stop) {
-    using iterator_type = decltype(start);
+    using iterator_type = decltype(start); // decltype = obtiene el tipo de dato de start
     typename iterator_type::value_type initial = 0;
     auto total = accumulate(start, stop, initial);
     auto avg = total / distance(start, stop);
